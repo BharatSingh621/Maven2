@@ -22,13 +22,11 @@ public class LoginPage {
 	public void Setup() 
 	{
 
-		WebDriverManager.edgedriver().setup();
-		driver = new EdgeDriver();		
-		
+		String Driver_path="C:\\Users\\Bharat Singh\\OneDrive\\Desktop\\Repo\\MavenProejct2\\src\\test\\resources\\Driver\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", Driver_path);
+		driver = new ChromeDriver();		
 		driver.manage().window().maximize();		
-		logger.info("Launching Browser.....");
-		driver.get("https://www.saucedemo.com/");
-		 logger.info("Browser Launched Successfully");  
+		driver.get("https://www.saucedemo.com/");  
 	}
 	
 	
