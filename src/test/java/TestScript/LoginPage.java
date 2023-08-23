@@ -14,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginPage {
 	
-	private static final Logger logger = LogManager.getLogger(LoginPage.class);  
+	Logger logger = LogManager.getLogger(LoginPage.class);  
 	
 	WebDriver driver;
 	
@@ -24,18 +24,22 @@ public class LoginPage {
 
 		String Driver_path="C:\\Users\\Bharat Singh\\OneDrive\\Desktop\\Repo\\MavenProejct2\\src\\test\\resources\\Driver\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", Driver_path);
+		logger.info("Setting Driver Path...");
 		driver = new ChromeDriver();		
-		driver.manage().window().maximize();		
+		driver.manage().window().maximize();
+		logger.info("Opening Browser...");
 		driver.get("https://www.saucedemo.com/");  
+		logger.info("Browser Launched");
 	}
 	
 	
 	@Test
 	public void Login_testCase_1()
 	{		
+		logger.info("Started Login_testCase_1....");
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
 		logger.info("Entered Username");
-		driver.findElement(By.id("password")).sendKeys("secret_sauce");
+		driver.findElement(By.id("passworda")).sendKeys("secret_sauce");
 		logger.info("Entered Password");
 		driver.findElement(By.id("login-button")).click();	
 		logger.info("Click on Login Button");
@@ -50,6 +54,7 @@ public class LoginPage {
 		logger.info("Entered Password");
 		driver.findElement(By.id("login-button")).click();	
 		logger.info("Click on Login Button");
+		logger.error("Test Case Passed/Failed");
 				
 	}
 	
