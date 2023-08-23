@@ -39,7 +39,7 @@ public class LoginPage {
 		logger.info("Started Login_testCase_1....");
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
 		logger.info("Entered Username");
-		driver.findElement(By.id("passworda")).sendKeys("secret_sauce");
+		driver.findElement(By.id("password")).sendKeys("secret_sauce");
 		logger.info("Entered Password");
 		driver.findElement(By.id("login-button")).click();	
 		logger.info("Click on Login Button");
