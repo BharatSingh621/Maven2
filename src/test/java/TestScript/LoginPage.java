@@ -37,7 +37,7 @@ public class LoginPage {
 	public void Login_testCase_1()
 	{		
 		logger.info("Started Login_testCase_1....");
-		logger.info("Trying to enter Username);
+		logger.info("Trying to enter Username");
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
 		logger.info("Entered Username");
 		logger.info("Trying to enter Password");
